@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="row text-center pt-5">
+    <div class="col-md-12">
+      <h1>Create a new Author</h1>
+    </div>
+  </div>
+  <div class="row pt-3 mt-3">
+    <div class="col-md-12">
+      <form (ngSubmit)="onSubmit(authorForm)" #authorForm="ngForm">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              name="name"
+              [(ngModel)]="author.name"
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="userName">User Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="userName"
+              name="userName"
+              [(ngModel)]="author.userName"
+            />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="email">Email</label>
+            <input
+              type="text"
+              class="form-control"
+              id="email"
+              name="email"
+              [(ngModel)]="author.email"
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="authorscol">Authorscol</label>
+            <input
+              type="text"
+              class="form-control"
+              id="authorscol"
+              name="authorscol"
+              [(ngModel)]="author.authorscol"
+            />
+          </div>
+        </div>
+        <button type="submit" class="btn btn-outline-info">Create</button>
+      </form>
+    </div>
+  </div>
+</div>

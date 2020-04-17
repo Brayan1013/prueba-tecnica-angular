@@ -1,0 +1,21 @@
+<div *ngIf="author" class="container">
+  <div class="row text-center pt-5">
+    <div class="col-md-12">
+      <hr />
+      <h1>{{ author.name }}</h1>
+      <hr />
+    </div>
+  </div>
+
+  <div class="row">
+    <div *ngFor="let post of author.posts" class="col-md-4 mt-2">
+      <div class="card">
+        <div class="card-body">
+          <h4>{{ post.title }}</h4>
+          <p>{{ post.content }}</p>
+          <a href="#" class="badge badge-danger">Likes {{ post.likes }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
